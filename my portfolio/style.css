@@ -1,0 +1,204 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000; /* Black background */
+    color: #f0b400; /* Golden brown text color */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+header .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #f0b400; /* Golden brown color for logo */
+}
+
+header nav a {
+    color: #f0b400; /* Golden brown color for nav links */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #ffffff; /* White on hover */
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    animation: fadeIn 2s ease;
+    color: #f0b400; /* Golden brown for hero text */
+}
+
+.features, .works {
+    padding: 50px 20px;
+    color: #f0b400; /* Golden brown text color */
+}
+
+.features h2, .works h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    text-align: center;
+    color: #f0b400; /* Golden brown headings */
+}
+
+.feature-list, .work-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.feature-item, .work-item {
+    background-color: #1a1a1a; /* Dark background for items */
+    padding: 20px;
+    margin: 10px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    color: #f0b400; /* Golden brown text color */
+    transition: transform 0.3s ease;
+}
+
+.feature-item i, .work-item .work-info i {
+    color: #f0b400; /* Golden brown color for icons */
+}
+
+.feature-item:hover, .work-item:hover {
+    transform: scale(1.05);
+}
+
+.work-item img {
+    width: 100%;
+    border-radius: 10px;
+    opacity: 0.9; /* Slight opacity for a softer look */
+}
+
+.work-info {
+    background-color: rgba(0, 0, 0, 0.6); /* Dark background with opacity */
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    color: #f0b400; /* Golden brown text color */
+    transition: opacity 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .feature-list, .work-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.contact, .location {
+    padding: 50px 20px;
+    background-color: #1a1a1a; /* Dark background */
+    color: #f0b400; /* Golden brown text */
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.contact h2, .location h2 {
+    font-size: 36px;
+    font-family: 'Playfair Display', serif;
+}
+
+.contact p, .location p {
+    font-size: 16px;
+    margin: 10px 0 20px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact form label {
+    font-size: 14px;
+    text-align: left;
+}
+
+.contact form input, .contact form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #f0b400;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #f0b400;
+}
+
+.contact form button {
+    padding: 10px 20px;
+    background-color: #f0b400;
+    border: none;
+    color: #000000;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact form button:hover {
+    background-color: #e0a300;
+}
+
+.location .map img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+/* Scroll Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.visible {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
